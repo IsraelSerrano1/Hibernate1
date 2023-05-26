@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Hibernate1Application implements CommandLineRunner {
+
     @Autowired
     private IPilotoService pServicio;
     public static void main(String[] args) {
