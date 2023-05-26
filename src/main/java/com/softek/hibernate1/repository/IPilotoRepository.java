@@ -10,8 +10,6 @@ import java.util.List;
 
 public interface IPilotoRepository extends JpaRepository<Piloto, Long> {
 
-    @Query("FROM Piloto p WHERE p.temporadas=:temporada")
-    List<Piloto> pilotosPorTemporada(@Param("temporada")Long temporada);
 
     @Query("FROM Piloto p WHERE p.escuderia.nombre =:escuderia")
     List<Piloto> pilotosPorEscuderia(@Param("escuderia") String escuderia);
@@ -24,10 +22,4 @@ public interface IPilotoRepository extends JpaRepository<Piloto, Long> {
 
     @Query("FROM Piloto p WHERE p.escuderia.pais <> 'Italia'")
     List<Piloto> pilotosNoItalianos();
-
-    @Query("SELECT t FROM Telefono t JOIN t.piloto p WHERE p.nombre = 'Alonso'")
-    List<Telefono> obtenerTelefonosDeAlonso();
-
-
-
 }

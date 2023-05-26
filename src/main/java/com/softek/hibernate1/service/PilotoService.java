@@ -13,11 +13,6 @@ public class PilotoService implements IPilotoService {
     @Autowired
     private IPilotoRepository pRepo;
     @Override
-    public List<Piloto> pilotosPorTemporada(Long temporada) {
-        return pRepo.pilotosPorTemporada(temporada);
-    }
-
-    @Override
     public List<Piloto> pilotosPorEscuderia(String escuderia) {
         return pRepo.pilotosPorEscuderia(escuderia);
     }
@@ -37,8 +32,4 @@ public class PilotoService implements IPilotoService {
         return pRepo.pilotosNoItalianos();
     }
 
-    @Override
-    public List<Telefono> obtenerTelefonosDeAlonso() {
-        return pRepo.obtenerTelefonosDeAlonso();
-    }
 }

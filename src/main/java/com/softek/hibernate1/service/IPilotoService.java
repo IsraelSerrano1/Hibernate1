@@ -8,7 +8,6 @@ import java.util.List;
 
 
 public interface IPilotoService {
-    List<Piloto> pilotosPorTemporada(Long temporada);
     List<Piloto> pilotosPorEscuderia(String escuderia);
 
     List<Piloto> pilotosPorSueldoMinimo(int sueldo);
@@ -17,5 +16,5 @@ public interface IPilotoService {
 
     List<Piloto> pilotosNoItalianos();
 
-    List<Telefono> obtenerTelefonosDeAlonso();
+
 }
